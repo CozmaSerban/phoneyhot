@@ -13,9 +13,10 @@ app.get('/answer', (req , res) => {
     const city = req.body.FromCity;
     console.log(req.body);
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new callAnswer();
-  twiml.say({ voice: 'alice' }, `Never gonna give you up ${city}.`);
+    const twiml = new callAnswer();
+    twiml.say({ voice: 'alice' }, `Never gonna give you up ${city}.`);
   //twiml.play({}, 'https://demo.twilio.com/docs/classic.mp3');
+
 
   // Render the response as XML in reply to the webhook request
   response.type('text/xml');
