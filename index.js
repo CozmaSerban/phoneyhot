@@ -22,6 +22,6 @@ app.get('/answer', (req , res) => {
   response.send(twiml.toString());
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, function(){
     console.log('I`m linstening on 3000');
 })
